@@ -13,7 +13,7 @@ const SubmitCollage = () => {
   const { email, displayName } = user || {};
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleCollage/${id}`)
+    fetch(`https://my-collage-server.vercel.app/singleCollage/${id}`)
       .then((res) => res.json())
       .then((data) => setCollage(data));
   }, [id]);
@@ -24,7 +24,7 @@ const SubmitCollage = () => {
       collage: collegeName,
     };
 
-    fetch("http://localhost:5000/submitCollages", {
+    fetch("https://my-collage-server.vercel.app/submitCollages", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

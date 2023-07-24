@@ -5,7 +5,7 @@ const AdmissionCollage = () => {
   const [colleges, setColleges] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/collages")
+    fetch("https://my-collage-server.vercel.app/collages")
       .then((res) => res.json())
       .then((data) => setColleges(data))
       .catch((error) => console.error("Error fetching data:", error));

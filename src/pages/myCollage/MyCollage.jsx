@@ -9,7 +9,7 @@ const MyCollage = () => {
   const { displayName, email } = user;
 
   useEffect(() => {
-    fetch("http://localhost:5000/myCollages")
+    fetch("https://my-collage-server.vercel.app/myCollages")
       .then((res) => res.json())
       .then((data) => setCollages(data))
       .catch((error) => console.error("Error fetching data:", error));

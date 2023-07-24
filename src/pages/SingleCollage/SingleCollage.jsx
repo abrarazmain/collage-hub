@@ -6,7 +6,7 @@ const SingleCollage = () => {
   const [collage, setCollage] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleCollage/${id}`)
+    fetch(`https://my-collage-server.vercel.app/singleCollage/${id}`)
       .then((res) => res.json())
       .then((data) => setCollage(data));
   }, [id]);
